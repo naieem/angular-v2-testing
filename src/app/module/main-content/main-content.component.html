@@ -1,7 +1,8 @@
-<app-header></app-header>
+<app-header [name]='name' #timer></app-header>
 
 <div class="container">
     <h1>Hero Form</h1>
+    <button (click)="clickEvent()"> hero</button>
     <li *ngFor="let item of people">{{item.name}}</li>
     <!-- <form>
         <div class="form-group">

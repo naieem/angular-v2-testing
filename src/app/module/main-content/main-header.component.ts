@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-header.component.css']
 })
 export class MainHeaderComponent implements OnInit {
+  @Input() name: string;
+  // name = 'sfd';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  savebutton() {
+    this.name = 'hello world';
   }
-
 }

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-sidebar.component.css']
 })
 export class LeftSidebarComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+    console.log('inside constructor');
+   }
 
   ngOnInit() {
+    console.log('oninit');
   }
 
 }

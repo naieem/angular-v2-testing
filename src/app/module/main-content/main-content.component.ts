@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeopleService } from './main-content-service';
+import { MainHeaderComponent } from './main-header.component';
 @Component({
   selector: 'app-content',
   providers: [PeopleService],
@@ -8,13 +9,16 @@ import { PeopleService } from './main-content-service';
 })
 export class MainContentComponent implements OnInit {
   values = '';
-  people = [];
-  onKey(value: string) {
-    this.values += value + ' | ';
-  }
+  people: any[];
+  name = 'sdfsd';
   constructor(public peopleService: PeopleService) {
     this.people = peopleService.getPeoples();
   }
-
   ngOnInit() {}
+  clickEvent() {
+    this.name = 'hello world';
+  }
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
 }
