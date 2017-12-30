@@ -1,0 +1,9 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RightSidebarComponent } from './right-sidebar.component';
+@NgModule({
+  imports: [CommonModule],
+  declarations: [RightSidebarComponent],
+  exports: [RightSidebarComponent]
+})
+export class RightSidebarModule {}

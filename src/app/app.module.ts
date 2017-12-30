@@ -1,26 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from './shared/shared.module';
+import { LeftSidebarModule } from './module/left-sidebar/left-sidebar.module';
+import { RightSidebarModule } from './module/right-sidebar/right-sidebar.module';
+import { MainContentModule } from './module/main-content/main-content.module';
 
 import { AppComponent } from './app.component';
 
-import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { MainHeaderComponent } from './main-header/main-header.component';
-
-
 @NgModule({
   declarations: [
-    AppComponent,
-    RightSidebarComponent,
-    MainContentComponent,
-    MainHeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    SharedModule
+    LeftSidebarModule,
+    RightSidebarModule,
+    MainContentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
